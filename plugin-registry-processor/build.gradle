@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+    id "kotlin-kapt"
+}
+apply from: "${rootDir}/maven-central-publish.gradle"
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.ext.kotlinVersion"
+    implementation 'com.google.auto.service:auto-service:1.0-rc4'
+    kapt 'com.google.auto.service:auto-service:1.0-rc4'
+    implementation "io.github.huangwenge:plugin-registry-annotation:1.0.0"
+}

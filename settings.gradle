@@ -1,0 +1,4 @@
+rootProject.name = "PluginRegistry"
+include ':app'
+include ':plugin-registry-annotation'
+include ':plugin-registry-processor'
